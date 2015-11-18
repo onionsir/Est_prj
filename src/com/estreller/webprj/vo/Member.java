@@ -3,35 +3,41 @@ package com.estreller.webprj.vo;
 import java.util.Date;
 
 public class Member {
-	private String mid; 
-	private String name;
-	private String pwd;
-	private Date regDate;
+	private String email;
+	private String nickname;
+	private	String pwd;
+	private Date joinDate;
+	private String totalRatings;
 	
-	
-	public String getMid() {
-		return mid;
+	public String getEmail() {
+		return email;
 	}
-	public void setMid(String mid) {
-		this.mid = mid;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getName() {
-		return name;
+	public String getNickname() {
+		return nickname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getPwd() {
 		return pwd;
 	}
-	public void setPwd(String password) {
-		this.pwd = password;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
-	public Date getRegDate() {
-		return regDate;
+	public Date getJoinDate() {
+		return joinDate;
 	}
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
+	}
+	public String getTotalRatings() {
+		return totalRatings;
+	}
+	public void setTotalRatings(String totalRatings) {
+		this.totalRatings = totalRatings;
 	}
 	
 	
