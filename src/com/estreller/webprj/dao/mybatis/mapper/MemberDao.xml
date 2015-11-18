@@ -13,15 +13,19 @@
      WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
      
   </select>
-  <update id="update">
-  update members set NAME = #{name} , PWD = #{pwd} where MID = #{mid}
+  <update id="update" parameterType ="com.estreller.wbprj.vo.Member">
+  update members 
+  set NickName = #{nickname} , Pwd = #{pwd} 
+  where Email = #{email}
   </update>
   
-  <insert id="insert">
-  insert into members(MID, NAME, PWD) values (#{mid}, #{name} , #{pwd})
+  <insert id="insert" parameterType="com.estreller.wbprj.vo.Member">
+  insert into members(Email, NickName, Pwd) 
+  values (#{email}, #{nickname} , #{pwd})
   </insert>
   
-  <delete id="delet">
-  delete members where MID = #{mid}
+  <delete id="delet" parameterType ="String">
+  delete members 
+  where Email = #{email}
   </delete>
 </mapper>

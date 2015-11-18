@@ -16,13 +16,13 @@ public class MybatisMemberDao implements MemberDao{
 	@Override
 	public List<Member> getMembers() throws SQLException {
 		// TODO Auto-generated method stub
-		return getMembers(1, "MID", "");
+		return getMembers(1, "Email", "");
 	}
 
 	@Override
 	public List<Member> getMembers(int page) throws SQLException {
 		// TODO Auto-generated method stub
-		return getMembers(page, "MID", "");
+		return getMembers(page, "Email", "");
 	}
 
 	@Override
@@ -47,10 +47,10 @@ public class MybatisMemberDao implements MemberDao{
 	}
 
 	@Override
-	public int delet(String mid) {
+	public int delete(String mid) {
 		SqlSession session = ssf.openSession();
 		MemberDao dao = session.getMapper(MemberDao.class);
-		int aft = dao.delet(mid);
+		int aft = dao.delete(mid);
 		session.commit();
 		session.close();
 		
