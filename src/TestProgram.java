@@ -2,9 +2,9 @@
 import java.sql.SQLException;
 import java.util.List;
 
-import com.estreller.wbprj.dao.mybatis.MyBatisMemberDao;
 import com.estreller.webprj.dao.MemberDao;
 import com.estreller.webprj.dao.mybatis.MybatisMemberDao;
+import com.estreller.webprj.dao.mybatis.EstrellerSqlSessionFactoryBuilder;
 //import com.estreller.webprj.vo.Manager;
 import com.estreller.webprj.vo.Member;
 
@@ -15,24 +15,23 @@ public class TestProgram {
 		
 		MemberDao dao = new MybatisMemberDao();//Mybatis활용
 		
-
 		Member member = new Member();
 		//업데이트시키기위한 셋팅.
-		member.setEmail("rlatkd12");
+	/*	member.setEmail("rlatkd12");
 		member.setNickname("쌍쌍");
 		member.setPwd("1234");
 		member.getJoinDate();
 		dao.update(member);
 		//rlatkd 이라는 아이디의 데이터를 삭제
-		dao.delete("rlatkd");
+		dao.delete("rlatkd");*/
 		//2페지이에 해당되는 멤버리스트를 담는다
 		List<Member> list = dao.getMembers(2);
 		//insert ID ,NAME 추가 회원가입개념.
-	    member.setEmail("rlatkd");
+	 /*   member.setEmail("rlatkd");
 		member.setEmail("김쌍");
 		member.setPwd("1234");
 		member.getJoinDate();
-		dao.insert(member);
+		dao.insert(member);*/
 	/*	
 		ManagerDao mdao = new ManagerDao();
 		List<Manager> mlist=mdao.getManager();*/
